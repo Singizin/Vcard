@@ -2,11 +2,9 @@ import os
 import re
 new_contact = 'BEGIN:VCARD\nVERSION:3.0\nN:{name1}\nFN:{name}\nTEL;TYPE=CELL:{num}\nEND:VCARD'
 
-f = open('files/test.txt','r', encoding='utf-8')
+f = open('files/obzvon.txt','r')
 # n = open('files/3fen.vcf','a',encoding='utf-8')
-email_pat = r'\S+[@]{1}\S+[.]{1}\S+'
-number_pat = r'[+]?\d+[(-]?\d+[)-]?\d+[-]?\d+[-]?\d+.'
-name = r'\w+(\s{1}\w)?'
+
 i = 0
 people = []
 for line in f:
